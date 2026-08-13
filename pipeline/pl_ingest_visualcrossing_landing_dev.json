@@ -25,6 +25,15 @@
 							"type": "JsonReadSettings"
 						}
 					},
+					"sink": {
+						"type": "JsonSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "JsonWriteSettings"
+						}
+					},
 					"enableStaging": false
 				},
 				"inputs": [
@@ -38,6 +47,27 @@
 							},
 							"date": {
 								"value": "@pipeline().parameters.date",
+								"type": "Expression"
+							},
+							"apiKey": "Y5C3YTTX9XSQ586HJD2DJ6AGT"
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "ds_json_visualcrossing_landing_dev",
+						"type": "DatasetReference",
+						"parameters": {
+							"city": {
+								"value": "@pipeline().parameters.city",
+								"type": "Expression"
+							},
+							"date": {
+								"value": "@pipeline().parameters.date",
+								"type": "Expression"
+							},
+							"file_name": {
+								"value": "@concat('atmos_', pipeline().parameters.city, '_', formatDateTime(utcNow(), 'yyyyMMddHHmmss'), '.json')",
 								"type": "Expression"
 							}
 						}
