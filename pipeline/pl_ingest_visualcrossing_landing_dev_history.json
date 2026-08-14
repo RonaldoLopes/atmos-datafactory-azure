@@ -118,9 +118,10 @@
 				"userProperties": [],
 				"typeProperties": {
 					"variableName": "date_list",
-					"value": [
-						""
-					]
+					"value": {
+						"value": "@range(0, add(div(sub(ticks(pipeline().parameters.endDate), ticks(pipeline().parameters.startDate)), 864000000000), 1))",
+						"type": "Expression"
+					}
 				}
 			}
 		],
