@@ -42,7 +42,7 @@
 				"typeProperties": {
 					"variableName": "date_list",
 					"value": {
-						"value": "@range(0, add(int(div(sub(ticks(utcNow()), ticks(addDays(utcNow(), sub(int(formatDateTime(pipeline().parameters.endDate, 'yyyyMMdd')), int(formatDateTime(pipeline().parameters.startDate, 'yyyyMMdd')))))), 864000000000)), 1))",
+						"value": "@range(0, add(int(sub(int(formatDateTime(pipeline().parameters.endDate, 'yyyyMMdd')), int(formatDateTime(pipeline().parameters.startDate, 'yyyyMMdd')))), 1))",
 						"type": "Expression"
 					}
 				}
