@@ -107,7 +107,7 @@
 			},
 			{
 				"name": "current_date",
-				"description": "@utcnow('yyyy-MM-dd')",
+				"description": "",
 				"type": "SetVariable",
 				"dependsOn": [
 					{
@@ -123,7 +123,8 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"variableName": "date"
+					"variableName": "date",
+					"value": "@utcnow('yyyy-MM-dd')"
 				}
 			}
 		],
