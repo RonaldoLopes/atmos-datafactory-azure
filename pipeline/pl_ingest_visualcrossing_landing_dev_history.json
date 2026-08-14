@@ -103,6 +103,12 @@
 			"city": {
 				"type": "string",
 				"defaultValue": "brasilia"
+			},
+			"startDate": {
+				"type": "string"
+			},
+			"endDate": {
+				"type": "string"
 			}
 		},
 		"variables": {
