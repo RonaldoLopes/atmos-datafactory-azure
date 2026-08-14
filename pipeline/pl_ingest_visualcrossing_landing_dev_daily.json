@@ -108,7 +108,8 @@
 		],
 		"parameters": {
 			"city": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "brasilia"
 			},
 			"date": {
 				"type": "string",
